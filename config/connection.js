@@ -14,9 +14,9 @@ module.exports.connect = () => {
 	return new Promise((resolve, reject) => {
 
 		if (state.db) return resolve()
-		const {database, dbConfig, dbName} = _config
+		const { database, dbConfig, dbName } = _config
 
-        // MongoClient Connection Method
+		// MongoClient Connection Method
 		MongoClient.connect(database, dbConfig, (err, client) => {
 			if (err) return reject(err)
 
